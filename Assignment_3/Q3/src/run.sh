@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Run vae and wgan without normalization of input
+# Run vae and wgan for DCGAN architecture and Assignment Problem-2 architecture
 python main_vae.py --cuda 1 --exp_name 'VAE_DCGAN' --niter 35 
 python main_wgan_gp.py --cuda 1 --exp_name 'WGAN_GP_DCGAN' --niter 35 
 python main_vae.py --cuda 1 --exp_name 'VAE_AR' --generator_type 'Assignment_recom' --niter 35 
