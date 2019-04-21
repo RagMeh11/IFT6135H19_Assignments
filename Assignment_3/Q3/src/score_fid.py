@@ -112,7 +112,8 @@ def calculate_fid_score(sample_feature_iterator, testset_feature_iterator, sampl
     # calculate trace of sqrt of sigma product
     sigma_s_sigma_t = np.matmul(sigma_s, sigma_t)    
 
-    sqrt_sigma_s_sigma_t, _ = scipy.linalg.sqrtm(sigma_s_sigma_t, disp = False)
+    # sqrt_sigma_s_sigma_t, _ = scipy.linalg.sqrtm(sigma_s_sigma_t, disp = False)
+    sqrt_sigma_s_sigma_t = scipy.linalg.sqrtm(sigma_s_sigma_t)
 
     # sometimes this results matrix with imagnary part
     # take only real value of it
