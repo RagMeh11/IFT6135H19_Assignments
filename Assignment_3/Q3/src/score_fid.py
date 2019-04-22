@@ -74,7 +74,8 @@ def extract_features(classifier, data_loader):
 
 def calculate_fid_score(sample_feature_iterator, testset_feature_iterator, sample_len, testset_len):
 
-    # fid_score = || mu_s - mu_t ||^2 + Trace(sigma_s + sigma_p - 2(sigma_s*sigma_p)^(1/2)) 
+    # fid_score = || mu_s - mu_t ||^2 + Trace(sigma_s + sigma_p - 2(sigma_s*sigma_p)^(1/2))
+    #           = || mu_s - mu_t ||^2 + Trace(sigma_s) + Trace(sigma_p) - 2 Trace((sigma_s*sigma_p)^(1/2)) 
     # make sure that statistics are calculated for same number of examples
     # otherwise it will be biased towards one or other
 
