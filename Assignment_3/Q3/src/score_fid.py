@@ -111,13 +111,12 @@ def calculate_fid_score(sample_feature_iterator, testset_feature_iterator, sampl
 
     # calculate trace of sqrt of sigma product
     sigma_s_sigma_t = np.matmul(sigma_s, sigma_t)    
+    
+    # add small value of epsilon to avoid imaginary part
+    idn = np.identity(sigma_s_sigma_t.shape[0])*5e-10
 
-    sqrt_sigma_s_sigma_t = scipy.linalg.sqrtm(sigma_s_sigma_t)
-
-    # sometimes this results matrix with imagnary part
-    # take only real value of it
-    sqrt_sigma_s_sigma_t =sqrt_sigma_s_sigma_t.real 
-
+    sqrt_sigma_s_sigma_t = scipy.linalg.sqrtm(sigma_s_sigma_t + idn)
+    
     # trace of square root 
     trace_p = np.trace(sqrt_sigma_s_sigma_t) 
 
