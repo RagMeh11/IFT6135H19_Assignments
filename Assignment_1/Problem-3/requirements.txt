@@ -7,7 +7,7 @@ comet-git-pure==0.19.11
 comet-ml==1.0.45
 conda==4.5.9
 configobj==5.0.6
-cryptography==2.2.2
+cryptography==3.2
 cycler==0.10.0
 Cython==0.28.5
 decorator==4.3.0
