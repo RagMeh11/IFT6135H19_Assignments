@@ -13,7 +13,7 @@ Cython==0.28.5
 decorator==4.3.0
 everett==1.0.1
 idna==2.6
-ipython==6.5.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 jedi==0.12.1
 jsonschema==2.6.0
